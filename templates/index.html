@@ -3,3 +3,23 @@
 
 
 
+
+
+{% block content %}
+{% verbatim %}
+test
+
+<div ng-controller="GoodController">
+    
+     {{name}}
+</div>
+
+asd
+{% endverbatim %}
+{% endblock content %}
+
+{% block js %}
+    {{ block.super }}
+    <script type="text/javascript" src="{{ STATIC_URL }}javascript/test/service.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}javascript/test/controller.js"></script>
+{% endblock js %}

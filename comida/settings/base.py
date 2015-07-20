@@ -88,7 +88,14 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = env('MEDIA_ROOT')
 STATIC_ROOT = env('STATIC_ROOT')
 
+TEMPLATE_DIRS = (
+    'templates',
+    os.path.join(BASE_DIR, 'templates'),
+)
 
+STATICFILES_DIRS = (
+    'static',
+)
 # Extra information #
 
 #####
